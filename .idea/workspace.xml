@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5268ca4-dec5-4ec3-aac3-f231860a209b" name="Default Changelist" comment="" />
+    <list default="true" id="e5268ca4-dec5-4ec3-aac3-f231860a209b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.1f19ae8e.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.1f19ae8e.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.1f19ae8e.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.1f19ae8e.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1gISHO9nIfSUtxwnET70LOy3BLp" />
   <component name="ProjectViewState">
@@ -22,7 +37,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -39,6 +54,8 @@
       <updated>1597800526083</updated>
       <workItem from="1597800527482" duration="853000" />
       <workItem from="1597801437477" duration="7147000" />
+      <workItem from="1597818658684" duration="1519000" />
+      <workItem from="1597820249167" duration="3276000" />
     </task>
     <servers />
   </component>
@@ -46,9 +63,9 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="625" y="329" key="SettingsEditor" timestamp="1597801234660">
+    <state x="570" y="297" key="SettingsEditor" timestamp="1597823032583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="625" y="329" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1597801234660" />
+    <state x="570" y="297" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1597823032583" />
   </component>
 </project>

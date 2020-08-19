@@ -11295,6 +11295,8 @@ var _jquery = _interopRequireDefault(require("jquery"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //第一部分
+var html = "\n<section id=\"app1\">\n        <div class=\"output\">\n            <span id=\"number\">100</span>\n        </div>\n        <div class=\"actions\">\n            <button id=\"add1\">+1</button>\n            <button id=\"minus1\">-1</button>\n            <button id=\"mul2\">\xD72</button>\n            <button id=\"divide2\">\xF72</button>\n        </div>\n    </section>\n";
+var $element = (0, _jquery.default)(html).appendTo((0, _jquery.default)("body>.page"));
 var $button1 = (0, _jquery.default)("#add1");
 var $button2 = (0, _jquery.default)("#minus1");
 var $button3 = (0, _jquery.default)("#mul2");
@@ -11338,19 +11340,26 @@ require("./app2.css");
 
 var _jquery = _interopRequireDefault(require("jquery"));
 
+var _localStorage$getItem;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //第二部分
+var html = "\n<section id=\"app2\">\n        <ol class=\"tab-bar\">\n            <li>1</li>\n            <li>2</li>\n        </ol>\n        <ol class=\"tab-content\">\n            <li>\u5185\u5BB91</li>\n            <li>\u5185\u5BB92</li>\n        </ol>\n    </section>\n";
+var $element = (0, _jquery.default)(html).appendTo((0, _jquery.default)('body>.page'));
 var $tabBar = (0, _jquery.default)("#app2 .tab-bar");
 var $tabContent = (0, _jquery.default)("#app2 .tab-content");
+var localKey = 'app2.index';
+var index = (_localStorage$getItem = localStorage.getItem(localKey)) !== null && _localStorage$getItem !== void 0 ? _localStorage$getItem : 0;
 $tabBar.on("click", 'li', function (e) {
   var $li = (0, _jquery.default)(e.currentTarget);
   $li.addClass("selected").siblings().removeClass("selected");
   var index = $li.index();
+  localStorage.setItem(localKey, index);
   $tabContent.children().eq(index).addClass("active").siblings().removeClass("active"); //不要用show(),hide(),css();  这三个api
   //样式与行为分离的思想
 });
-$tabBar.children().eq(0).trigger("click");
+$tabBar.children().eq(index).trigger("click");
 },{"./app2.css":"app2.css","jquery":"../node_modules/jquery/dist/jquery.js"}],"app3.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
@@ -11365,9 +11374,21 @@ var _jquery = _interopRequireDefault(require("jquery"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var $square = (0, _jquery.default)("#app3 .square");
-$square.on("click", function () {
-  $square.toggleClass('active');
+var html = "\n  <section id=\"app3\">\n        <div class=\"square\"></div>\n    </section>\n";
+var $element = (0, _jquery.default)(html).appendTo((0, _jquery.default)('body>.page'));
+var $square = (0, _jquery.default)('#app3 .square');
+var localKey = 'app3.active'; // yes no undefined
+
+var active = localStorage.getItem(localKey) === 'yes';
+$square.toggleClass('active', active);
+$square.on('click', function () {
+  if ($square.hasClass('active')) {
+    $square.removeClass('active');
+    localStorage.setItem(localKey, 'no');
+  } else {
+    $square.addClass('active');
+    localStorage.setItem('app3.active', 'yes');
+  }
 });
 },{"./app3.css":"app3.css","jquery":"../node_modules/jquery/dist/jquery.js"}],"app4.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
@@ -11383,6 +11404,8 @@ var _jquery = _interopRequireDefault(require("jquery"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var html = "\n<section id=\"app4\">\n        <div class=\"circle\"></div>\n    </section>\n";
+var $element = (0, _jquery.default)(html).appendTo((0, _jquery.default)('body>.page'));
 var $circle = (0, _jquery.default)("#app4 .circle");
 $circle.on("mouseenter", function () {
   $circle.toggleClass('active');
@@ -11431,7 +11454,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64367" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63247" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
