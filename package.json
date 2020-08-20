@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "vue": "^2.6.12"
   },
   "devDependencies": {
     "cssnano": "^4.1.10"
